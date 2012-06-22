@@ -99,7 +99,7 @@ class MetaModelAttributeTranslatedLongtext extends MetaModelAttributeComplex
 		$arrReturn = array();
 		while ($objValue->next())
 		{
-		    $arrReturn[$objValue->item_id] = $objValue->row();
+			$arrReturn[$objValue->item_id] = $objValue->row();
 		}
 		return $arrReturn;
 	}
