@@ -16,7 +16,7 @@
  */
 
 /**
- * This is the MetaModelAttribute class for handling text fields.
+ * This is the MetaModelAttribute class for handling translated long text fields.
  *
  * @package     MetaModels
  * @subpackage  AttributeText
@@ -173,18 +173,30 @@ implements IMetaModelAttributeTranslated
 
 	public function setTranslatedDataFor($arrValues, $strLangCode)
 	{
-		$strMetaModelTableName = $this->getMetaModel()->getTableName();
-		$arrReturn = array();
+		$objDB = Database::getInstance();
+		// first off determine those to be updated and those to be inserted.
+		$arrIds = array_keys($arrValues);
+		$arrExisting = array_keys($this->getTranslatedDataFor($arrIds, $strLangCode));
+		$arrNewIds = array_diff($arrIds, $arrExisting);
 
-		if ($strTableName && $strColNameId)
+		// now update...
+		foreach ($arrExisting as $intId)
 		{
-			$strColNameValue = $this->get('select_column');
-			$objDB = Database::getInstance();
-			$strQuery = sprintf('UPDATE %1$s SET %2$s=? WHERE %1$s.id=?', $strMetaModelTableName, $this->getColName());
-			foreach ($arrValues as $intItemId => $arrValue)
-			{
-				$objQuery = $objDB->prepare($strQuery)->execute($arrValue[$strColNameId], $intItemId);
-			}
+			$objDB->prepare('UPDATE tl_metamodel_translatedlongtext SET value=?, tstamp=? WHERE att_id=? AND langcode=? AND item_id=?')
+				  ->execute($arrValues[$intId], time(), $this->get('id'), $strLangCode, $intId);
+		}
+		// ...and insert
+		foreach ($arrExisting as $intId)
+		{
+			$objDB->prepare('INSERT INTO tl_metamodel_translatedlongtext SET value=? WHERE  att_id=? AND langcode=? AND item_id=?')
+				  ->set(array(
+				  'tstamp' => time(),
+				  'value' => $arrValues[$intId],
+				  'att_id' => $this->get('id'),
+				  'langcode' => $strLangCode,
+				  'item_id' => $intId,
+				  ))
+				  ->execute();
 		}
 	}
 
