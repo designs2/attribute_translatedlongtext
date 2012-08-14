@@ -84,7 +84,7 @@ class MetaModelAttributeTranslatedLongtext extends MetaModelAttributeComplex
 		return $arrFieldDef;
 	}
 
-	public function parseValue($arrRowData, $strOutputFormat = 'html')
+	public function parseValue($arrRowData, $strOutputFormat = 'html', $objSettings = null)
 	{
 		$arrResult = parent::parseValue($arrRowData, $strOutputFormat);
 		$arrResult['html'] = $arrRowData[$this->getColName()]['value'];
