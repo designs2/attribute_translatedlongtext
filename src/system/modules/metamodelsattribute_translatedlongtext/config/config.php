@@ -18,6 +18,6 @@
 $GLOBALS['METAMODELS']['attributes']['translatedlongtext'] = array
 (
 	'class' => 'MetaModelAttributeTranslatedLongtext',
-	'image' => 'system/modules/metamodelsattribute_translatedtext/html/text.gif'
+	'image' => 'system/modules/metamodelsattribute_translatedlongtext/html/textarea.png'
 );
 ?>
