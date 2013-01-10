@@ -25,6 +25,19 @@
 class MetaModelAttributeTranslatedLongtext
 extends MetaModelAttributeTranslatedReference
 {
+	public function getAttributeSettingNames()
+	{
+		return array_merge(parent::getAttributeSettingNames(), array(
+			'allowHtml',
+			'rte',
+			'preserveTags',
+			'decodeEntities',
+			'rte',
+			'rows',
+			'cols',
+		));
+	}
+
 	protected function getValueTable()
 	{
 		return 'tl_metamodel_translatedlongtext';
