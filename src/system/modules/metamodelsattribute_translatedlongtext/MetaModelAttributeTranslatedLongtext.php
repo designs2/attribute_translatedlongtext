@@ -30,9 +30,9 @@ extends MetaModelAttributeTranslatedReference
 		return 'tl_metamodel_translatedlongtext';
 	}
 
-	public function getFieldDefinition()
+	public function getFieldDefinition($arrOverrides = array())
 	{
-		$arrFieldDef=parent::getFieldDefinition();
+		$arrFieldDef=parent::getFieldDefinition($arrOverrides);
 		$arrFieldDef['inputType'] = 'textarea';
 		return $arrFieldDef;
 	}
