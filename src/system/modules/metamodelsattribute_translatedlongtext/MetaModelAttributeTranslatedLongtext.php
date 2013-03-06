@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
@@ -8,10 +8,10 @@
  *
  * PHP version 5
  * @package     MetaModels
- * @subpackage  AttributeText
+ * @subpackage  AttributeTranslatedLongtext
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
- * @copyright  The MetaModels team.
- * @license    LGPL.
+ * @copyright   The MetaModels team.
+ * @license     LGPL.
  * @filesource
  */
 
@@ -22,8 +22,7 @@
  * @subpackage  AttributeText
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
-class MetaModelAttributeTranslatedLongtext
-extends MetaModelAttributeTranslatedReference
+class MetaModelAttributeTranslatedLongtext extends MetaModelAttributeTranslatedReference
 {
 	public function getAttributeSettingNames()
 	{
@@ -50,5 +49,3 @@ extends MetaModelAttributeTranslatedReference
 		return $arrFieldDef;
 	}
 }
-
-?>

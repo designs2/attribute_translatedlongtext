@@ -10,13 +10,25 @@
  * @package     MetaModels
  * @subpackage  AttributeTranslatedLongtext
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author      Andreas Isaak <info@andreas-isaak.de>
  * @copyright   The MetaModels team.
  * @license     LGPL.
  * @filesource
  */
 
-$GLOBALS['METAMODELS']['attributes']['translatedlongtext'] = array
+/**
+ * Register the classes
+ */
+ClassLoader::addClasses(array
 (
-	'class' => 'MetaModelAttributeTranslatedLongtext',
-	'image' => 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png'
-);
+	'MetaModelAttributeTranslatedLongtext'              => 'system/modules/metamodelsattribute_translatedlongtext/MetaModelAttributeTranslatedLongtext.php',
+));
+
+
+/**
+ * Register the templates
+ */
+TemplateLoader::addFiles(array
+(
+	'mm_attr_translatedlongtext'              => 'system/modules/metamodelsattribute_translatedlongtext/templates',
+));
