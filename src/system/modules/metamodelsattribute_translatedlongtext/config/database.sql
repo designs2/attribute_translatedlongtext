@@ -8,7 +8,7 @@
 -- **********************************************************
 
 -- 
--- Table `tl_metamodel_translatedtext`
+-- Table `tl_metamodel_translatedlongtext`
 -- 
 
 CREATE TABLE `tl_metamodel_translatedlongtext` (
