@@ -15,14 +15,18 @@
  * @filesource
  */
 
+namespace MetaModels\Attribute\TranslatedLongtext;
+
+use MetaModels\Attribute\TranslatedReference;
+
 /**
  * This is the MetaModelAttribute class for handling translated long text fields.
  *
  * @package     MetaModels
- * @subpackage  AttributeText
+ * @subpackage  AttributeTranslatedLongtext
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
-class MetaModelAttributeTranslatedLongtext extends MetaModelAttributeTranslatedReference
+class TranslatedLongtext extends TranslatedReference
 {
 	public function getAttributeSettingNames()
 	{

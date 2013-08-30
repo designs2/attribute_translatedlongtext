@@ -21,7 +21,9 @@
  */
 ClassLoader::addClasses(array
 (
-	'MetaModelAttributeTranslatedLongtext'              => 'system/modules/metamodelsattribute_translatedlongtext/MetaModelAttributeTranslatedLongtext.php',
+	'MetaModels\Attribute\TranslatedLongtext\TranslatedLongtext' => 'system/modules/metamodelsattribute_translatedlongtext/MetaModels/Attribute/TranslatedLongtext/TranslatedLongtext.php',
+
+	'MetaModelAttributeTranslatedLongtext'              => 'system/modules/metamodelsattribute_translatedlongtext/deprecated/MetaModelAttributeTranslatedLongtext.php',
 ));
 
 
