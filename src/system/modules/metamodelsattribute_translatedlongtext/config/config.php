@@ -15,8 +15,5 @@
  * @filesource
  */
 
-$GLOBALS['METAMODELS']['attributes']['translatedlongtext'] = array
-(
-	'class' => 'MetaModelAttributeTranslatedLongtext',
-	'image' => 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png'
-);
+$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['class'] = 'MetaModelAttributeTranslatedLongtext';
+$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['image'] = 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png';
