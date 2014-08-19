@@ -15,11 +15,8 @@
  * @filesource
  */
 
-$GLOBALS['METAMODELS']['attributes']['translatedlongtext'] = array
-(
-	'class' => 'MetaModels\Attribute\TranslatedLongtext\TranslatedLongtext',
-	'image' => 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png'
-);
+$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['class'] = 'MetaModelAttributeTranslatedLongtext';
+$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['image'] = 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png';
 
 // non composerized Contao 2.X autoload support.
 $GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__);
