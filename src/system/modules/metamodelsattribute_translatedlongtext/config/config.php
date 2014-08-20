@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
  * each with its own unique set of selectable attributes, with attribute extendability.
@@ -17,7 +16,3 @@
 
 $GLOBALS['METAMODELS']['attributes']['translatedlongtext']['class'] = 'MetaModels\Attribute\TranslatedLongtext\TranslatedLongtext';
 $GLOBALS['METAMODELS']['attributes']['translatedlongtext']['image'] = 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png';
-
-// non composerized Contao 2.X autoload support.
-$GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__);
-$GLOBALS['MM_AUTOLOAD'][] = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'deprecated';
