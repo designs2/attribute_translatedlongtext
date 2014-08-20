@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
  * each with its own unique set of selectable attributes, with attribute extendability.
@@ -19,7 +18,4 @@
  * Table tl_metamodel_attribute 
  */
 
-$GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['translatedlongtext extends _complexattribute_'] = array
-(
-//	'+display' => array('titleField after name')
-);
+$GLOBALS['TL_DCA']['tl_metamodel_attribute']['metapalettes']['translatedlongtext extends _complexattribute_'] = array();

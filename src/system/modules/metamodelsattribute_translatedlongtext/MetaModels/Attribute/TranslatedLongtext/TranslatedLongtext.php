@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The MetaModels extension allows the creation of multiple collections of custom items,
  * each with its own unique set of selectable attributes, with attribute extendability.
@@ -28,6 +27,9 @@ use MetaModels\Attribute\TranslatedReference;
  */
 class TranslatedLongtext extends TranslatedReference
 {
+	/**
+	 * {@inheritDoc}
+	 */
 	public function getAttributeSettingNames()
 	{
 		return array_merge(parent::getAttributeSettingNames(), array(
@@ -41,14 +43,20 @@ class TranslatedLongtext extends TranslatedReference
 		));
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	protected function getValueTable()
 	{
 		return 'tl_metamodel_translatedlongtext';
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	public function getFieldDefinition($arrOverrides = array())
 	{
-		$arrFieldDef=parent::getFieldDefinition($arrOverrides);
+		$arrFieldDef              = parent::getFieldDefinition($arrOverrides);
 		$arrFieldDef['inputType'] = 'textarea';
 		return $arrFieldDef;
 	}
