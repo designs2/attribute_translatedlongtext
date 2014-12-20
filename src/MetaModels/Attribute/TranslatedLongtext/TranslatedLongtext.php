@@ -6,6 +6,7 @@
  * data in each collection.
  *
  * PHP version 5
+ *
  * @package     MetaModels
  * @subpackage  AttributeTranslatedLongtext
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
@@ -23,41 +24,40 @@ use MetaModels\Attribute\TranslatedReference;
  *
  * @package     MetaModels
  * @subpackage  AttributeTranslatedLongtext
- * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
  */
 class TranslatedLongtext extends TranslatedReference
 {
-	/**
-	 * {@inheritDoc}
-	 */
-	public function getAttributeSettingNames()
-	{
-		return array_merge(parent::getAttributeSettingNames(), array(
-			'allowHtml',
-			'rte',
-			'preserveTags',
-			'decodeEntities',
-			'rte',
-			'rows',
-			'cols',
-		));
-	}
+    /**
+     * {@inheritDoc}
+     */
+    public function getAttributeSettingNames()
+    {
+        return array_merge(parent::getAttributeSettingNames(), array(
+            'allowHtml',
+            'rte',
+            'preserveTags',
+            'decodeEntities',
+            'rte',
+            'rows',
+            'cols',
+        ));
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	protected function getValueTable()
-	{
-		return 'tl_metamodel_translatedlongtext';
-	}
+    /**
+     * {@inheritDoc}
+     */
+    protected function getValueTable()
+    {
+        return 'tl_metamodel_translatedlongtext';
+    }
 
-	/**
-	 * {@inheritDoc}
-	 */
-	public function getFieldDefinition($arrOverrides = array())
-	{
-		$arrFieldDef              = parent::getFieldDefinition($arrOverrides);
-		$arrFieldDef['inputType'] = 'textarea';
-		return $arrFieldDef;
-	}
+    /**
+     * {@inheritDoc}
+     */
+    public function getFieldDefinition($arrOverrides = array())
+    {
+        $arrFieldDef              = parent::getFieldDefinition($arrOverrides);
+        $arrFieldDef['inputType'] = 'textarea';
+        return $arrFieldDef;
+    }
 }
