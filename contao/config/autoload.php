@@ -20,5 +20,5 @@
  */
 TemplateLoader::addFiles(array
 (
-	'mm_attr_translatedlongtext' => 'system/modules/metamodelsattribute_translatedlongtext/templates',
+    'mm_attr_translatedlongtext' => 'system/modules/metamodelsattribute_translatedlongtext/templates',
 ));
