@@ -6,13 +6,22 @@
  * data in each collection.
  *
  * PHP version 5
+ *
  * @package     MetaModels
  * @subpackage  AttributeTranslatedLongtext
  * @author      Christian Schiffler <c.schiffler@cyberspectrum.de>
+ * @author      Andreas Isaak <info@andreas-isaak.de>
+ * @author      Christopher Boelter <christopher@boelter.eu>
+ * @author      David Maack <maack@men-at-work.de>
+ * @author      Stefan Heimes <stefan_heimes@hotmail.com>
  * @copyright   The MetaModels team.
  * @license     LGPL.
  * @filesource
  */
 
-$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['class'] = 'MetaModels\Attribute\TranslatedLongtext\TranslatedLongtext';
-$GLOBALS['METAMODELS']['attributes']['translatedlongtext']['image'] = 'system/modules/metamodelsattribute_translatedlongtext/html/longtext.png';
+/**
+ * Table tl_metamodel_filtersetting
+ */
+
+$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['simplelookup_palettes']['translatedlongtext'] =
+	&$GLOBALS['TL_DCA']['tl_metamodel_filtersetting']['simplelookup_palettes']['_translated_'];
